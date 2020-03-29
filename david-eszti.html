@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang = "HU">
+
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="Esküvöi meghívó">
+  <title>Dávid & Eszti</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+   <link rel="shortcut icon" type="image/x-icon" href="images/wedding-landing-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7CMuli:400,700%7CLibre+Baskerville:300,400,700" rel="stylesheet">
+<style id="jsbin-css">
+-/* =============================
+
+    GENERAL STYLES
+
+=============================*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Single-direction margin declaration to establish vertical rhythm. */
+
+h1,h2,h3,
+ul,ol,
+p,
+img {
+    margin-bottom: 1.5rem;
+}
+
+body {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png') repeat center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #444349;
+}
+
+.locations,
+.program,
+.gifts,
+.faq,
+.contact {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: 'Great Vibes', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+
+a:hover {
+  color: #eda087;
+  transition: color .15s ease-in-out;
+}
+
+/* =============================
+
+    HEADER STYLES
+
+=============================*/
+
+.cover {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat 70% center/cover;
+  display: table;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hero-text {
+  margin: 0 auto;
+  padding: .625rem;
+  color: hsla(0,0%,100%,.9);
+  background: hsla(100,0%,0%,.5);
+}
+
+.hero-text h1 {
+  font-size: 3.15rem;
+  color: #d2ba87;
+  margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
+}
+
+.tagline {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+}
+
+.tagline::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+
+.date {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  vertical-align: middle;
+}
+
+.date::before,
+.date::after {
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+
+/* =============================
+
+      LOCATIONS STYLES
+
+=============================*/
+
+.blurb img {
+  height: 7.5rem;
+}
+
+.blurb h3 {
+  font-weight: 700;
+}
+
+.blurb div {
+  font-family: 'Muli', sans-serif;
+}
+
+
+.blurb::after {
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 25vw;
+  margin: 1.5rem auto;
+  background-color: #444349;
+}
+
+/* =============================
+
+        PROGRAM STYLES
+
+=============================*/
+
+.program {
+  width: 100vw;
+  text-align: left;
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  font-family: 'Muli', sans-serif;
+}
+
+.program h2 {
+  font-family: 'Great Vibes', cursive;
+  margin-top: 1rem; /* To account for the unequal margins compared to the previous section. */
+  text-align: center;
+}
+
+.program p {
+  font-style: italic;
+}
+
+.program ul {
+  letter-spacing: .025rem;
+}
+
+/* =============================
+
+        GIFTS STYLES
+
+=============================*/
+
+.gifts img {
+  height: 7.5rem;
+}
+
+.gifts p:last-child {   /* To even out the bottom and top margins of this section. */
+  margin-bottom: 0;
+}
+
+/* =============================
+
+        FAQ STYLES
+
+=============================*/
+
+.faq {
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  width: 100vw;
+  text-align: center;
+}
+
+.faq h2 {
+  margin-top: 1rem; /* To even out top and bottom margins. */
+}
+
+.faq p {
+  font-family: 'Muli', sans-serif;
+  text-align: left;
+}
+
+.question-group::after {
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+.question {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.answer {
+  margin-bottom: 1.5rem;
+}
+
+/* =============================
+
+        FOOTER STYLES
+
+=============================*/
+
+footer {
+  height: 10vh;
+  width: 100vw;
+  background-color: #606060;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: table;
+  text-align: center;
+  font-size: .875rem;
+}
+
+.footer-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: .5rem 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer small {
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+
+  .cover {
+    background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+
+}
+
+...
+
+@media (min-width: 768px) {
+
+  .hero-text {
+    padding: 1.25rem;
+    border-radius: 4px;
+    width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 7rem;
+  }
+
+}
+
+...
+
+@media (min-width: 768px) {
+
+  .tagline {
+    text-transform: uppercase;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .blurb {
+    display: inline-block;
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+
+  .blurb::after {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .program-wrapper {
+    width: 30vw;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .question-group {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+
+  .question-group::after {
+    display: none;
+  }
+
+  .question-group h3 {
+    text-align: left;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  footer {
+    min-height: 7vh;
+  }
+
+}
+</style>
+</head>
+<body>
+  <header class="cover">
+    <div class="hero-text-wrapper">
+      <div class="hero-text">
+        <div class="tagline">Összeházasodnak</div>
+        <h1>Dávid &amp; Eszti</h1>
+        <span class="date">2020 junius ?</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="locations">
+      <h2>Helyszinek</h2>
+      <div class="blurb">
+        <h3>Szertartás</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-ceremony.png" alt="Ceremony">
+        <div>lesz templomi vagy csak polgári? </div>
+        <div>hol és mikor?</div>
+      </div>
+      <div class="blurb">
+        <h3>Photos</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-photoshoot.png" alt="Photoshoot">
+        <div>ilyen lesz?</div>
+        <div>ha lesz akkor hol?</div>
+      </div>
+      <div class="blurb">
+        <h3>Party</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-party.png" alt="Party">
+        <div>Bagolyvár​ étterem</div>
+        <div>Pécs, Felsőhavi dűlő 6,</div>
+      </div>
+    </section>
+    <section class="program">
+      <h2>Program</h2>
+      <div class="program-wrapper">
+        <p>"Valahogy így lesz, ez biztos."</p>
+        <ul>
+          <li>13:45 – Esküvői ceremonia</li>
+          <li>14:30 – Fotozás</li>
+          <li>16:00 – Cocktails</li>
+          <li>18:00 – Vacsora</li>
+          <li>22:00 – Torta</li>
+          <li>... - 4:00 –Tánc hajnalig</li>
+        </ul>
+      </div>
+    </section>
+    <section class="gifts">
+      <h2>Ajándékok</h2>
+      <p>A legnagyobb ajándék számunkra az, hogy ott vagy.</p>
+      <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-gifts.png" alt="Gifts">
+      <p>Kérünk, csak gyere el, és érezd jól magad velünk.</p>
+    </section>
+    <section class="faq">
+      <h2>Kérdések & Válaszok</h2>
+      <div class="question-group">
+        <h3>Utazás és szállás</h3>
+        <p class="question">Lesz valamilyen szervezett utazás</p>
+        <p class="answer"> 13:15 órakor találkozunk a templomban.</p>
+        <p class="question">Hol tudok parkolni?</p>
+        <p class="answer">A parkolás a hétvégén ingyenes. A helyek közel vannak egymáshoz, így nincs szüksége autóra.</p>
+        <p class="question">Hogyan lehet utazni éjjel?</p>
+        <p class="answer">A busz egész éjjel üzemel és eléri a város minden nagyobb forgalmi csomópontját.</p>
+      </div>
+      <div class="question-group">
+        <h3>Ételek és ünnepség</h3>
+        <p class="question">Szeretnék valamiféle meglepetést csinálni nektek, a partin. Kivel kellene beszélnem erről?</p>
+        <p class="answer">Beszéld meg Hadobás Gézával küldj neki e-mailt. <a href="mailto:hadobas.geza@bukfa.hu">hadobas.geza@bukfa.hu</a>.</p>
+        <p class="question">Mit vegyek fel? Van dress code?</p>
+        <p class="answer">Viselj olyan ruhát ami kényelmes neked <a href="#" target="_blank">laza elegáns</a> / <a href="#" target="_blank">üzleti alkalmi</a> a hölgyeknek <a href="#" target="_blank">laza elegáns</a> / <a href="#" target="_blank">informális</a> az urak számára tökéletes lehetőségek.</p>
+        <p class="question">Szeretnék valamilyen különleges ételt (gluténmentes, laktózmentes, vegán stb.)</p>
+        <p class="answer">Dobj nekünk egy pár sort <a href="mailto:hadobas.geza@bukfa.hu">itt</a> és megoldjuk a kérésed</p>
+      </div>
+      <div class="question-group">
+        <h3>Other small stuff</h3>
+        <p class="question">Van egy problémám / kérdésem az esküvő napján. Kivel beszélhetek?</p>
+        <p class="answer">Hadobás Géza ezen a számon: <a href="tel:+36309946445">+36 30 9946445</a>.</p>
+        <p class="question">Hozhatunk gyerekeket?</p>
+        <p class="answer">Biztos! Terveztük számukra egy játék- és / édességsarkot.</p>
+        <p class="question">Mit gondolsz a kutyákról? Hozhatom az enyémet?</p>
+        <p class="answer">Szeretjük a kutyákat, és abszolút hozhatod a tiéd. A "Heaven Lounge" kutyabarát hely.</p>
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Kapcsolat</h2>
+      <p>Ha bármilyen kérdésed van, nyugodtan hívj / írj.</p>
+      <p>Phone: <a href="tel:+36309946445">+36 30 000 0000</a> (Dávid) / <a href="tel:+36300000000">+36 30 000 0000</a> (Eszti)</p>
+      <p>Email: <a href="mailto:hadobas.geza@bukfa.hu">hadobas.geza@bukfa.hu</a></p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+      <p><small>Készült szívvel és szeretettel ♥  Pécs ©2020 | Icons by <a href="http://www.flaticon.com/authors/becris" title="Becris">Becris</a> (<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>)</small></p>
+    </div>
+  </footer>
+</body>
+</html>
